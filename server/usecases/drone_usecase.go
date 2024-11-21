@@ -67,7 +67,7 @@ func (uc *droneUsecaseImpl) DeleteDrone(id int) error {
 
 // Симуляция движения дронов
 func (uc *droneUsecaseImpl) startDroneMovement() {
-	ticker := time.NewTicker(3 * time.Second)
+	ticker := time.NewTicker(1 * time.Second)
 	defer ticker.Stop()
 
 	for {
