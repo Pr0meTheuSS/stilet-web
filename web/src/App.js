@@ -1,13 +1,16 @@
 import React from 'react';
 import DroneControlPage from './Pages/DroneControlPage';
 import './App.css';
+import ReactDOM from 'react-dom';
+import { DroneServiceProvider } from './Services/DroneService';
 
-function App() {
-  return (
-    <div className="App">
+const App = () => (
+  <DroneServiceProvider>
       <DroneControlPage />
-    </div>
+  </DroneServiceProvider>
   );
-}
+
 
 export default App;
+
+ReactDOM.render(<App />, document.getElementById('root'));
